@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" fill="none" width="100%" height="100%">
+  <!-- Icon Group -->
+  <g transform="translate(10, 5)">
+    <!-- Speed Lines (Left) -->
+    <!-- Line 1 (Green) -->
+    <rect x="25" y="32" width="22" height="6" rx="3" fill="#0F5132" />
+    <rect x="15" y="44" width="28" height="6" rx="3" fill="#22C55E" />
+    <rect x="25" y="56" width="30" height="6" rx="3" fill="#22C55E" />
+    
+    <!-- Line 3 (Yellow Accent) -->
+    <rect x="35" y="68" width="32" height="7" rx="3.5" fill="#FACC15" />
+    
+    <!-- Line 4 & 5 (Green) -->
+    <rect x="10" y="80" width="40" height="6" rx="3" fill="#0F5132" />
+    <rect x="40" y="92" width="25" height="6" rx="3" fill="#0F5132" />
+    
+    <!-- Main Green D-Shape -->
+    <path d="M 70 20 
+             H 120 
+             C 155 20, 185 45, 185 70 
+             C 185 95, 155 120, 120 120 
+             H 70 
+             C 80 110, 85 95, 85 90
+             H 120
+             C 138 90, 150 82, 150 70
+             C 150 58, 138 50, 120 50
+             H 85
+             C 85 45, 80 30, 70 20 Z" 
+          fill="url(#greenGradient)" 
+          fill-rule="evenodd" />
+
+    <!-- Center Yellow Play Triangle -->
+    <path d="M 115 52 
+             L 150 70 
+             L 115 88 
+             Z" 
+          fill="#FACC15" />
+  </g>
+
+  <!-- Typography Text -->
+  <text x="210" y="70" font-family="'Poppins', 'Inter', sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">
+    desenvolvem
+  </text>
+  
+  <!-- Tagline / Services -->
+  <text x="212" y="95" font-family="'Poppins', 'Inter', sans-serif" font-size="11" font-weight="600" fill="#22C55E" letter-spacing="2">
+    SITES • INSTAGRAM • FACEBOOK • YOUTUBE • TRÁFEGO PAGO
+  </text>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="greenGradient" x1="70" y1="20" x2="185" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#0F5132" />
+    </linearGradient>
+  </defs>
+</svg>
