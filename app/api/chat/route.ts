@@ -25,8 +25,8 @@ export async function POST(req: NextRequest) {
       }
     });
 
-    // Default to a free, fast model on OpenRouter
-    const model = process.env.OPENROUTER_MODEL || 'google/gemini-2.5-flash:free';
+    // Default to a fast model on OpenRouter
+    const model = process.env.OPENROUTER_MODEL || 'google/gemini-2.5-flash';
 
     const response = await openai.chat.completions.create({
       model: model,
