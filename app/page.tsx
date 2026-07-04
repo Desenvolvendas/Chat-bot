@@ -58,11 +58,11 @@ export default function Home() {
 
     setIsWelcomeScreen(false);
     setPhase('chat');
-    
+
     // Add user's initial idea
     const userMsg: Message = { role: 'user', content: initialIdea };
     const welcomeMsg: Message = { role: 'assistant', content: INITIAL_QUESTION };
-    
+
     setMessages([userMsg, welcomeMsg]);
     setInitialIdea('');
   };
@@ -73,7 +73,7 @@ export default function Home() {
 
     const userMsg: Message = { role: 'user', content: textToSend };
     const updatedMessages = [...messages, userMsg];
-    
+
     setMessages(updatedMessages);
     setInput('');
     setLoading(true);
@@ -157,7 +157,7 @@ export default function Home() {
 
   const handleContactSubmit = async (details: ContactDetails) => {
     setContactDetails(details);
-    
+
     const response = await fetch('/api/send', {
       method: 'POST',
       headers: {
@@ -189,7 +189,7 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-300 ${darkMode ? 'bg-zinc-950 text-zinc-50' : 'bg-slate-50 text-slate-900'}`}>
-      
+
       {/* Top Navbar */}
       <header className="sticky top-0 z-40 backdrop-blur-md border-b bg-white/70 border-slate-200/50 dark:bg-zinc-900/70 dark:border-zinc-800/50 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -209,7 +209,7 @@ export default function Home() {
             >
               {darkMode ? <Sun size={18} /> : <Moon size={18} />}
             </button>
-            
+
             {(!isWelcomeScreen || phase === 'done') && (
               <button
                 onClick={handleReset}
@@ -225,21 +225,21 @@ export default function Home() {
 
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col justify-center max-w-6xl w-full mx-auto p-4 md:p-6">
-        
+
         {isWelcomeScreen ? (
           /* Welcome Screen */
           <div className="max-w-2xl mx-auto w-full text-center py-12 md:py-20 animate-scale-up">
             <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#22C55E]/10 to-[#FACC15]/10 text-[#22C55E] dark:text-[#22C55E] mb-6 shadow-sm border border-[#22C55E]/15">
               <Lightbulb size={28} className="animate-pulse" />
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
               Consolide sua ideia de{' '}
               <span className="bg-gradient-to-r from-[#22C55E] to-[#FACC15] bg-clip-text text-transparent">
                 Negócio
               </span>
             </h1>
-            
+
             <p className="text-lg text-slate-500 dark:text-zinc-400 max-w-lg mx-auto mb-10">
               Responda a algumas perguntas interativas. Nossa inteligência artificial vai estruturar um documento executivo para você submeter aos avaliadores.
             </p>
@@ -275,7 +275,7 @@ export default function Home() {
                   {messages.map((msg, index) => (
                     <ChatMessage key={index} message={msg} />
                   ))}
-                  
+
                   {loading && (
                     <div className="flex items-center gap-2 py-4 justify-start">
                       <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#22C55E] to-[#0F5132] text-white shadow-md shadow-emerald-500/10">
@@ -339,11 +339,11 @@ export default function Home() {
                 <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-500 mb-6 shadow-sm shadow-emerald-500/10 border border-emerald-500/10">
                   <CheckCircle size={36} className="animate-bounce" />
                 </div>
-                
+
                 <h1 className="text-3xl font-extrabold tracking-tight mb-3">
                   Ideia Enviada com Sucesso!
                 </h1>
-                
+
                 <p className="text-slate-500 dark:text-zinc-400 mb-8 leading-relaxed">
                   {contactDetails?.nome}, obrigado por submeter a sua ideia de negócio. O documento estruturado já foi encaminhado para a equipe da desenvolvem. Entraremos em contato em breve através do e-mail <strong>{contactDetails?.email}</strong>.
                 </p>
