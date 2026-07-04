@@ -10,6 +10,26 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "desenvolvem — Chatbot de Ideias",
   description: "Organize, estruture e valide suas ideias de negócios com ajuda do consultor inteligente desenvolvem.",
+  openGraph: {
+    title: "desenvolvem — Chatbot de Ideias",
+    description: "Organize, estruture e valide suas ideias de negócios com ajuda do consultor inteligente desenvolvem.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "desenvolvem — Chatbot de Ideias",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "desenvolvem — Chatbot de Ideias",
+    description: "Organize, estruture e valide suas ideias de negócios com ajuda do consultor inteligente desenvolvem.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
