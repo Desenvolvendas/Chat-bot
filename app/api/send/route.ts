@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
         </div>
         
         <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0;">
-        <p style="color:#94a3b8; font-size:11px; text-align: center; margin-bottom: 0; text-transform: uppercase; letter-spacing: 0.05em;">Enviado via chatbot de ideias — desenvolvem</p>
+        <p style="color:#94a3b8; font-size:11px; text-align: center; margin-bottom: 0; text-transform: uppercase; letter-spacing: 0.05em;">Enviado via chatbot de ideias — Desenvolvem</p>
       </div>
     `;
 

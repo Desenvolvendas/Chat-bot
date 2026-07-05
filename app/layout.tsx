@@ -7,18 +7,25 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: "desenvolvem — Chatbot de Ideias",
-  description: "Organize, estruture e valide suas ideias de negócios com ajuda do consultor inteligente desenvolvem.",
+  metadataBase: new URL('https://desenvolvem.com.br'),
+  title: "Desenvolvem — Chatbot de Ideias",
+  description: "Organize, estruture e valide suas ideias de negócios com ajuda do consultor inteligente Desenvolvem.",
   openGraph: {
-    title: "desenvolvem — Chatbot de Ideias",
-    description: "Organize, estruture e valide suas ideias de negócios com ajuda do consultor inteligente desenvolvem.",
+    title: "Desenvolvem — Chatbot de Ideias",
+    description: "Organize, estruture e valide suas ideias de negócios com ajuda do consultor inteligente Desenvolvem.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "desenvolvem — Chatbot de Ideias",
+        alt: "Desenvolvem — Chatbot de Ideias",
       },
     ],
     locale: "pt_BR",
@@ -26,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "desenvolvem — Chatbot de Ideias",
-    description: "Organize, estruture e valide suas ideias de negócios com ajuda do consultor inteligente desenvolvem.",
+    title: "Desenvolvem — Chatbot de Ideias",
+    description: "Organize, estruture e valide suas ideias de negócios com ajuda do consultor inteligente Desenvolvem.",
     images: ["/og-image.png"],
   },
 };
@@ -42,7 +49,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-slate-50 dark:bg-zinc-950 transition-colors duration-300">
+      <body className="min-h-full flex flex-col bg-slate-50 dark:bg-zinc-950 transition-colors duration-300 w-full max-w-full overflow-x-hidden">
         {children}
       </body>
     </html>

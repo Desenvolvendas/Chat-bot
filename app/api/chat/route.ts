@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       apiKey: apiKey,
       defaultHeaders: {
         'HTTP-Referer': 'https://desenvolvem.com.br',
-        'X-Title': 'desenvolvem Chatbot',
+        'X-Title': 'Desenvolvem Chatbot',
       }
     });
 

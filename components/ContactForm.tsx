@@ -67,7 +67,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
               value={details.nome}
               onChange={(e) => setDetails({ ...details, nome: e.target.value })}
               placeholder="Ex: João Silva"
-              className="w-full pl-10 pr-4 py-3 text-sm rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 focus:bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:bg-zinc-900 dark:focus:bg-zinc-950 dark:text-zinc-100 dark:placeholder-zinc-600 dark:focus:ring-blue-500/10 dark:focus:border-blue-500 transition-all"
+              className="w-full pl-10 pr-4 py-3 text-base rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 focus:bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:bg-zinc-900 dark:focus:bg-zinc-950 dark:text-zinc-100 dark:placeholder-zinc-600 dark:focus:ring-blue-500/10 dark:focus:border-blue-500 transition-all"
             />
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
               value={details.telefone}
               onChange={(e) => setDetails({ ...details, telefone: e.target.value })}
               placeholder="Ex: (11) 99999-9999"
-              className="w-full pl-10 pr-4 py-3 text-sm rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 focus:bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:bg-zinc-900 dark:focus:bg-zinc-950 dark:text-zinc-100 dark:placeholder-zinc-600 dark:focus:ring-blue-500/10 dark:focus:border-blue-500 transition-all"
+              className="w-full pl-10 pr-4 py-3 text-base rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 focus:bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:bg-zinc-900 dark:focus:bg-zinc-950 dark:text-zinc-100 dark:placeholder-zinc-600 dark:focus:ring-blue-500/10 dark:focus:border-blue-500 transition-all"
             />
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
               value={details.email}
               onChange={(e) => setDetails({ ...details, email: e.target.value })}
               placeholder="Ex: joao@empresa.com"
-              className="w-full pl-10 pr-4 py-3 text-sm rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 focus:bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:bg-zinc-900 dark:focus:bg-zinc-950 dark:text-zinc-100 dark:placeholder-zinc-600 dark:focus:ring-blue-500/10 dark:focus:border-blue-500 transition-all"
+              className="w-full pl-10 pr-4 py-3 text-base rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 focus:bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:bg-zinc-900 dark:focus:bg-zinc-950 dark:text-zinc-100 dark:placeholder-zinc-600 dark:focus:ring-blue-500/10 dark:focus:border-blue-500 transition-all"
             />
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         <button
           type="submit"
           disabled={loading}
-          className="w-full flex items-center justify-center gap-2 py-3 px-4 font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-xl transition-all shadow-md shadow-blue-500/15 hover:shadow-lg disabled:opacity-50"
+          className="w-full flex items-center justify-center gap-2 py-3 px-4 font-semibold text-white bg-gradient-to-r from-[#22C55E] to-[#0F5132] hover:from-[#1eb054] hover:to-[#0b3c25] rounded-xl transition-all shadow-md shadow-emerald-500/15 hover:shadow-lg disabled:opacity-50"
         >
           {loading ? (
             <>

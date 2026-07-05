@@ -28,11 +28,20 @@ export default function DocumentPreview({ document, onAdjust, onConfirm }: Docum
     for (const sec of rawSections) {
       const lines = sec.trim().split('\n');
       if (lines.length > 0 && lines[0].startsWith('## ')) {
-        const title = lines[0].replace('## ', '').trim();
+        let title = lines[0].replace('## ', '').trim();
         const content = lines.slice(1).join('\n').trim();
+        
+        let key = title.toUpperCase();
+        
+        // Normalize "IDEIA EM UNA FRASE" to "IDEIA EM UMA FRASE" (common LLM spelling typo)
+        if (/IDEIA\s+EM\s+U[MN]A\s+FRASE/i.test(title)) {
+          title = 'Ideia em uma Frase';
+          key = 'IDEIA EM UMA FRASE';
+        }
+
         parsed.push({
           title: title,
-          key: title.toUpperCase(),
+          key: key,
           content: content
         });
       }
@@ -85,7 +94,7 @@ export default function DocumentPreview({ document, onAdjust, onConfirm }: Docum
           </button>
           <button
             onClick={onConfirm}
-            className="flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md shadow-blue-500/10 hover:shadow-lg"
+            className="flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl text-white bg-gradient-to-r from-[#22C55E] to-[#0F5132] hover:from-[#1eb054] hover:to-[#0b3c25] transition-all shadow-md shadow-emerald-500/15 hover:shadow-lg animate-pulse-subtle"
           >
             <Check size={16} />
             Confirmar e Enviar
